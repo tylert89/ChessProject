@@ -5,4 +5,5 @@ package chess;
  */
 public class Bishop extends ChessPiece {
     //test comit
+    // does this work
 }
