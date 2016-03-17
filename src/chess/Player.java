@@ -1,4 +1,4 @@
-package W16Project3;
+package chess;
 
 public enum Player {
     BLACK, WHITE;
