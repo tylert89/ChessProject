@@ -6,43 +6,96 @@ package chess;
 public class ChessModel implements IChessModel {
     private IChessPiece[][] board;
     private Player player;
-    // declare other instance variables as needed
+    private int numRows; //height of board
+    private int numCol; // width of board
+
+
 
     public ChessModel() {
-        // complete this
+        numRows = 8; //defualt value, change when implementing GUI user input
+        numCol = 8; //defualt value, change when implementing GUI user input
+        //instantiate player?
+        board = new IChessPiece[numRows][numCol]; // i assume we have to do this
+
+
+
     }
 
     public boolean isComplete() {
         return false;
+        // FIXME: 3/17/2016 step 10
     }
 
-    public boolean isValidMove(Move moce) {
-        // complete this
+    public boolean isValidMove(Move move) {
+        boolean validMove = false;
+        if(board[move.fromRow][move.fromColumn].isValidMove(move, board)){ //i have no idea what this is doing or if it works
+           validMove = true;
+        }
+        return validMove;
     }
 
     public void move(Move move) {
-        // complete this
+        if(isValidMove(move)){ //not sure if condition is necessary
+            board[move.fromRow][move.fromColumn] = board[move.toRow][move.toColumn];
+        }
+        else{
+            System.out.println("move is not valid"); // remove if condition is not necessary
+        }
     }
 
     public boolean inCheck(Player p) {
         return false;
+        // FIXME: 3/17/2016 step 9
     }
 
     public Player currentPlayer() {
-        // complete this
+        return player;
     }
 
     public int numRows() {
-        // complete this
+        return numRows;
     }
 
     public int numColumns() {
-        // complete this
+        return numCol;
     }
 
-    public IChessPiece pieceAt(int row, int column) {
-        // complete this
+    public Player getPlayer() {
+        return player; // same as currentPlayer()
     }
 
-    // add other public or helper methods as needed
+    public void setPlayer(Player player) {
+        this.player = player;
+    }
+
+    public int getNumRows() {
+        return numRows;
+    }
+
+    public void setNumRows(int numRows) {
+        this.numRows = numRows;
+    }
+
+    public int getNumCol() {
+        return numCol;
+    }
+
+    public void setNumCol(int numCol) {
+        this.numCol = numCol;
+    }
+
+    public IChessPiece pieceAt(int row, int col) {
+        return board[row][col];
+
+    }
+
+    public IChessPiece[][] getBoard() {
+        return board;
+    }
+
+    public void setBoard(IChessPiece[][] board) {
+        this.board = board;
+    }
+
+
 }
