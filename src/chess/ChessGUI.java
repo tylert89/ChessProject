@@ -13,9 +13,9 @@ public class ChessGUI {
         JFrame frame = new JFrame("Chess Game");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        frame.setLayout(new MigLayout("fill") );
+        frame.setLayout(new MigLayout("debug, fill") );
         ChessPanel panel = new ChessPanel();
-        frame.getContentPane().add(panel);
+        frame.getContentPane().add(panel, "center, grow");
 
         frame.pack();
         frame.setVisible(true);
