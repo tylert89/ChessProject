@@ -30,5 +30,6 @@ public class Bishop extends ChessPiece {
     }
     //JakeSunday
     //13234
+    //akfjlsjdlkajsgklajl;kg
   
 }
