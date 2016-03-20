@@ -29,5 +29,6 @@ public class Bishop extends ChessPiece {
         return validMove;
     }
     //JakeSunday
+    //13234
   
 }
