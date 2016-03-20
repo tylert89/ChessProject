@@ -30,4 +30,5 @@ public class Bishop extends ChessPiece {
     }
     // does this work
     //no
+    //yes?
 }
