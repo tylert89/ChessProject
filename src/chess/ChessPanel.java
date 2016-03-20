@@ -6,6 +6,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+//230
 
 /***********************************************************************
  *
@@ -30,18 +31,18 @@ public class ChessPanel extends JPanel {
 
     public ChessPanel() {
 
-        model = new ChessModel();
-        board = new JButton[model.getNumRows()][model.getNumCol()];
-
         MigLayout layout = new MigLayout("wrap 1", "[grow,fill]"); //setting to view grid lines etc
         this.setLayout(layout);
 
+        model = new ChessModel();
+        board = new JButton[8][8];
+
+
+
         JPanel boardPanel = new JPanel(new MigLayout("fill", "grow"));
         boardPanel.add(createButtonBoard(), "center,");
+        displayBoard();
         this.add(boardPanel, "center, span");
-
-
-
 
 
     }
@@ -73,14 +74,48 @@ public class ChessPanel extends JPanel {
     private void displayBoard() {
         for (int row = 0; row < model.getNumRows(); row++) {
             for (int col = 0; col < model.getNumCol(); col++) {
-                //board[row][col[]=null                             //eventually update with icons instead of text
-                if (model.pieceAt(row, col).type() == "Pawn") {
-                    if(model.currentPlayer() == Player.WHITE){
-                        board[row][col].setText("P");
-                    } else if (model.currentPlayer() == Player.BLACK){
-                        board[row][col].setText("P");
+                if (model.pieceAt(row, col) != null) {
+                    if (model.pieceAt(row, col).type() == "Pawn") {
+                        if (model.pieceAt(row, col).player() == Player.WHITE) {
+                            board[row][col].setText("WP");
+                        } else {
+                            board[row][col].setText("BP");
+                        }
+                    } else if (model.pieceAt(row, col).type() == "Rook") {
+                        if (model.pieceAt(row, col).player() == Player.WHITE) {
+                            board[row][col].setText("WR");
+                        } else {
+                            board[row][col].setText("BR");
+                        }
+                    } else if (model.pieceAt(row, col).type() == "Knight") {
+                        if (model.pieceAt(row, col).player() == Player.WHITE) {
+                            board[row][col].setText("WK");
+                        } else {
+                            board[row][col].setText("BK");
+                        }
+                    } else if (model.pieceAt(row, col).type() == "Bishop") {
+                        if (model.pieceAt(row, col).player() == Player.WHITE) {
+                            board[row][col].setText("WB");
+                        } else {
+                            board[row][col].setText("BB");
+                        }
+                    } else if (model.pieceAt(row, col).type() == "Queen") {
+                        if (model.pieceAt(row, col).player() == Player.WHITE) {
+                            board[row][col].setText("WQ");
+                        } else {
+                            board[row][col].setText("BQ");
+                        }
+                    } else if (model.pieceAt(row, col).type() == "King") {
+                        if (model.pieceAt(row, col).player() == Player.WHITE) {
+                            board[row][col].setText("WK");
+                        } else {
+                            board[row][col].setText("BK");
+                        }
                     }
+
                 }
+
+
             }
         }
 
@@ -103,9 +138,6 @@ public class ChessPanel extends JPanel {
             }
         }
     }
-
-
-
 
 
 }
