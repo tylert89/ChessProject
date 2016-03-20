@@ -17,6 +17,32 @@ public class ChessModel implements IChessModel {
         //instantiate player?
         board = new IChessPiece[numRows][numCol]; // i assume we have to do this
 
+        board[0][0] = new Rook(player.WHITE);     // adding all of the pieces onto the board
+        board[0][1] = new Knight(player.WHITE);
+        board[0][2] = new Bishop(player.WHITE);
+        board[0][3] = new King(player.WHITE);
+        board[0][4] = new Queen(player.WHITE);
+        board[0][5] = new Bishop(player.WHITE);
+        board[0][6] = new Knight(player.WHITE);
+        board[0][7] = new Rook(player.WHITE);
+
+        board[7][0] = new Rook(player.BLACK);
+        board[7][1] = new Knight(player.BLACK);
+        board[7][2] = new Bishop(player.BLACK);
+        board[7][3] = new King(player.BLACK);
+        board[7][4] = new Queen(player.BLACK);
+        board[7][5] = new Bishop(player.BLACK);
+        board[7][6] = new Knight(player.BLACK);
+        board[7][7] = new Rook(player.BLACK);
+
+        for (int col = 0; col < numCol; col++){
+            board[1][col] = new Pawn(player.BLACK);
+            board[6][col] = new Pawn(player.WHITE);
+        }
+
+
+
+
 
 
     }
