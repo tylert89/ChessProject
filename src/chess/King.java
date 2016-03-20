@@ -36,6 +36,7 @@ public class King extends ChessPiece {
                 if(move.toColumn == move.fromColumn){
                     validMove = true;
                 }
+                //Test
             }
 
         }
