@@ -125,7 +125,6 @@ public class ChessPanel extends JPanel {
     // inner class that represents action listener for buttons
     private class ButtonListener implements ActionListener {
 
-        afjakfakdsjklf
         public void actionPerformed(ActionEvent event) {
             for (int row = 0; row < model.getNumRows(); row++) {
                 for (int col = 0; col < model.getNumCol(); col++) {

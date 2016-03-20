@@ -28,4 +28,5 @@ public class Bishop extends ChessPiece {
         //fix in step 8
         return validMove;
     }
+    // does this work
 }
