@@ -77,39 +77,39 @@ public class ChessPanel extends JPanel {
                 if (model.pieceAt(row, col) != null) {
                     if (model.pieceAt(row, col).type() == "Pawn") {
                         if (model.pieceAt(row, col).player() == Player.WHITE) {
-                            board[row][col].setText("WP");
+                            board[row][col].setIcon(new ImageIcon("R Pawn.png"));
                         } else {
-                            board[row][col].setText("BP");
+                            board[row][col].setIcon(new ImageIcon("B Pawn.png"));
                         }
                     } else if (model.pieceAt(row, col).type() == "Rook") {
                         if (model.pieceAt(row, col).player() == Player.WHITE) {
-                            board[row][col].setText("WR");
+                            board[row][col].setIcon(new ImageIcon("R Rook.png"));
                         } else {
-                            board[row][col].setText("BR");
+                            board[row][col].setIcon(new ImageIcon("B Rook.png"));
                         }
                     } else if (model.pieceAt(row, col).type() == "Knight") {
                         if (model.pieceAt(row, col).player() == Player.WHITE) {
-                            board[row][col].setText("WK");
+                            board[row][col].setIcon(new ImageIcon("R Knight.png"));
                         } else {
-                            board[row][col].setText("BK");
+                            board[row][col].setIcon(new ImageIcon("B Knight.png"));
                         }
                     } else if (model.pieceAt(row, col).type() == "Bishop") {
                         if (model.pieceAt(row, col).player() == Player.WHITE) {
-                            board[row][col].setText("WB");
+                            board[row][col].setIcon(new ImageIcon("R Bishop.png"));
                         } else {
-                            board[row][col].setText("BB");
+                            board[row][col].setIcon(new ImageIcon("B Bishop.png"));
                         }
                     } else if (model.pieceAt(row, col).type() == "Queen") {
                         if (model.pieceAt(row, col).player() == Player.WHITE) {
-                            board[row][col].setText("WQ");
+                            board[row][col].setIcon(new ImageIcon("R Queen.png"));
                         } else {
-                            board[row][col].setText("BQ");
+                            board[row][col].setIcon(new ImageIcon("B Queen.png"));
                         }
                     } else if (model.pieceAt(row, col).type() == "King") {
                         if (model.pieceAt(row, col).player() == Player.WHITE) {
-                            board[row][col].setText("WK");
+                            board[row][col].setIcon(new ImageIcon("R King.png"));
                         } else {
-                            board[row][col].setText("BK");
+                            board[row][col].setIcon(new ImageIcon("B King.png"));
                         }
                     }
 
