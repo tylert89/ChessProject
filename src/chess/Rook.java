@@ -1,5 +1,14 @@
 package chess;
 
+/***********************************************************************
+ *
+ * Plays Chess
+ *
+ * @author Jake, Tyler, Jonathan
+ * @version 1.0
+ *
+ **********************************************************************/
+
 /**
  * Created by tylerfaulk on 2/29/16.
  */
@@ -22,6 +31,7 @@ public class Rook extends ChessPiece {
                     validMove = true;
                 }
             }
+
 
         }
         return validMove;

@@ -1,5 +1,14 @@
 package chess;
 
+/***********************************************************************
+ *
+ * Plays Chess
+ *
+ * @author Jake, Tyler, Jonathan
+ * @version 1.0
+ *
+ **********************************************************************/
+
 public class Move {
 
     public int fromRow, fromColumn, toRow, toColumn;

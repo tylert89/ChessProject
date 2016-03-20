@@ -1,5 +1,14 @@
 package chess;
 
+/***********************************************************************
+ *
+ * Plays Chess
+ *
+ * @author Jake, Tyler, Jonathan
+ * @version 1.0
+ *
+ **********************************************************************/
+
 /**
  * Created by tylerfaulk on 2/29/16.
  */
@@ -16,7 +25,14 @@ public class Queen extends ChessPiece {
     @Override
     public boolean isValidMove(Move move, IChessPiece[][] board) {
         boolean validMove = false;
-        //fix in step 8
+        if(super.isValidMove(move, board)){
+            if(move.toRow == move.fromRow+1){ //add code to allow for a two space move on the pawns first move
+                if(move.toColumn == move.fromColumn){
+                    validMove = true;
+                }
+            }
+        //Needs proper row and col
+        }
         return validMove;
     }
 }

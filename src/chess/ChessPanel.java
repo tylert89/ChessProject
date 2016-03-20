@@ -7,6 +7,15 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/***********************************************************************
+ *
+ * Plays Chess
+ *
+ * @author Jake, Tyler, Jonathan
+ * @version 1.0
+ *
+ **********************************************************************/
+
 /**
  * Created by tylerfaulk on 2/29/16.
  */
@@ -38,17 +47,26 @@ public class ChessPanel extends JPanel {
     }
 
     private JPanel createButtonBoard() { // not sure if this is the best way
+        int count = 1;
         JPanel boardPanel = new JPanel(new GridLayout(8,8));
         for (int row = 0; row < model.getNumRows(); row++) {
             for (int col = 0; col < model.getNumCol(); col++) {
                 board[row][col] = new JButton();
+
+                if (count % 2 == 0)
+                    board[row][col].setBackground(Color.blue);
+                if(!(col == 7))
+                    count++;
+
                 //board[row][col].setBorder(BorderFactory.
                   //      createLineBorder(Color.gray, 1, false));//setting buttons to have a boarder
                 board[row][col].addActionListener(buttonListener);
                 board[row][col].setPreferredSize(new Dimension(100,100));
                 boardPanel.add(board[row][col]);
+
             }
         }
+
         return boardPanel;
     }
 

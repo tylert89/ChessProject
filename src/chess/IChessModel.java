@@ -1,6 +1,17 @@
 package chess;
 
+/***********************************************************************
+ *
+ * Plays Chess
+ *
+ * @author Jake, Tyler, Jonathan
+ * @version 1.0
+ *
+ **********************************************************************/
+
 public interface IChessModel {
+
+
 
     /**
      * Returns whether the game is complete.

@@ -4,6 +4,15 @@ import net.miginfocom.swing.MigLayout;
 
 import javax.swing.*;
 
+/***********************************************************************
+ *
+ * Plays Chess
+ *
+ * @author Jake, Tyler, Jonathan
+ * @version 1.0
+ *
+ **********************************************************************/
+
 /**
  * Created by tylerfaulk on 2/29/16.
  */
