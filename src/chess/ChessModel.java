@@ -12,10 +12,10 @@ public class ChessModel implements IChessModel {
 
 
     public ChessModel() {
-        numRows = 8; //defualt value, change when implementing GUI user input
-        numCol = 8; //defualt value, change when implementing GUI user input
+        numRows = 8;
+        numCol = 8;
         //instantiate player?
-        board = new IChessPiece[numRows][numCol]; // i assume we have to do this
+        board = new IChessPiece[8][8];
 
         board[0][0] = new Rook(player.WHITE);     // adding all of the pieces onto the board
         board[0][1] = new Knight(player.WHITE);
@@ -35,10 +35,12 @@ public class ChessModel implements IChessModel {
         board[7][6] = new Knight(player.BLACK);
         board[7][7] = new Rook(player.BLACK);
 
-        for (int col = 0; col < numCol; col++){
-            board[1][col] = new Pawn(player.BLACK);
-            board[6][col] = new Pawn(player.WHITE);
+        for (int col = 0; col < numCol; col++) {
+            board[6][col] = new Pawn(player.BLACK);
+            board[1][col] = new Pawn(player.WHITE);
         }
+
+
 
 
 
