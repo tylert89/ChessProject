@@ -9,12 +9,10 @@ import java.awt.event.ActionListener;
 //230
 
 /***********************************************************************
- *
  * Plays Chess
  *
  * @author Jake, Tyler, Jonathan
  * @version 1.0
- *
  **********************************************************************/
 
 /**
@@ -56,7 +54,7 @@ public class ChessPanel extends JPanel {
 
                 if (count % 2 == 0)
                     board[row][col].setBackground(Color.blue);
-                if(!(col == 7))
+                if (!(col == 7))
                     count++;
 
                 //board[row][col].setBorder(BorderFactory.
@@ -127,12 +125,13 @@ public class ChessPanel extends JPanel {
     // inner class that represents action listener for buttons
     private class ButtonListener implements ActionListener {
 
+        afjakfakdsjklf
         public void actionPerformed(ActionEvent event) {
             for (int row = 0; row < model.getNumRows(); row++) {
                 for (int col = 0; col < model.getNumCol(); col++) {
-                    if (board[row][col] == event.getSource()){
-
+                    if (board[row][col] == event.getSource()) {
                     }
+
 
                 }
             }
